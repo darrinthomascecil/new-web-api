@@ -25,7 +25,7 @@ steps:
     command: 'publish'
     publishWebProjects: true
 - bash: |
-    echo ${{ parameters.nickname }}\
-- bash: echo This can use the $SYSTEM_ACCESSTOKEN
+    echo ${{ parameters.nickname }}
+- bash: echo This script could use $SYSTEM_ACCESSTOKEN
   env:
     SYSTEM_ACCESSTOKEN: $(System.AccessToken)
