@@ -11,6 +11,7 @@ namespace new_web_api
 {
     public class Program
     {
+        //running a simple test
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
