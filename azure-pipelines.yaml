@@ -9,11 +9,9 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  # buildConfiguration: 'Release'
-  # anotherVariable: 'wonk'
-- name: one
-  value: initialValue
-
+  buildConfiguration: 'Release'
+  anotherVariable: 'wonk'
+  one: initialValue
 parameters:
 - name: nickname
   type: string
@@ -26,8 +24,14 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-- bash: |
-    echo ${{ parameters.nickname }}
+#Example of how to user parameters
+# - bash: |
+#     echo ${{ parameters.nickname }}
+
+#Accessing the PAT if you need it
 - bash: echo This script could use $SYSTEM_ACCESSTOKEN
   env:
     SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+- bash: |
+    echo ${{ variables.one }}
+    echo macro syntax $(one)
