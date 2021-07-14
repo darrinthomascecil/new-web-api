@@ -13,7 +13,7 @@ variables:
   anotherVariable: 'wonk'
   one: initialValue
   two: blah
-  group: test-variable-group
+  group: test-variable-group123
 parameters:
 - name: nickname
   type: string
