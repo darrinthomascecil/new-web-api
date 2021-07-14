@@ -36,7 +36,8 @@ steps:
 - bash: |
     echo ${{ variables.one }}
     echo macro syntax $(one)
+    echo '##vso[task.setvariable variable=two]secondValue2'
 #this runtime change might need to be in a different bash step in order to work
 - bash: | 
-    echo '##vso[task.setvariable variable=two]secondValue2'
+    
     echo $(two)
