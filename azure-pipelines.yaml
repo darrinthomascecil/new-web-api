@@ -13,6 +13,10 @@ variables:
   buildConfiguration: 'Release'
   anotherVariable: 'wonk'
 
+inputs:
+  name: 'the input'
+  type: number
+
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
