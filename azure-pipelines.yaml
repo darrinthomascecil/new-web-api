@@ -35,3 +35,6 @@ steps:
 - bash: |
     echo ${{ variables.one }}
     echo macro syntax $(one)
+- bash: | 
+    echo '##vso[task.setvariable variable=two]secondValue'
+    echo $(two)
