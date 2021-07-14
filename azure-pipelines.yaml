@@ -26,4 +26,4 @@ jobs:
 - job: b
   steps:
   - bash: echo 'doing a bash'
-  - bash: echo 'let\'s do another' 
+  - bash: echo 'let/'s do another' 
