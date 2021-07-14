@@ -24,7 +24,6 @@ jobs:
   steps:
   - task: AzureKeyVault@2
     inputs:
-      azureSubscription: darrinthomascecil-rezero.us-b491bf98-6ea2-4a07-a641-200d61d7a735
-
+      azureSubscription: key-vault
       KeyVaultName: darrin-cecil-key-vault
   - bash: echo $(storage-account-key)
