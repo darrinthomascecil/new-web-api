@@ -13,9 +13,10 @@ variables:
   buildConfiguration: 'Release'
   anotherVariable: 'wonk'
 
-inputs:
-  name: 'the input'
-  type: number
+parameters:
+- name: nickname
+  type: string
+  default: d-man
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
@@ -25,5 +26,5 @@ steps:
     command: 'publish'
     publishWebProjects: true
 - bash: |
-
-    echo 'hello world ' && echo $(anotherVariable)
+    echo {{ parameters.nickname }}
+    
