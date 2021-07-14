@@ -11,8 +11,8 @@ pool:
 variables:
   buildConfiguration: 'Release'
   anotherVariable: 'wonk'
-- name: one
-  value: initialValue
+  - name: one
+    value: initialValue
 
 parameters:
 - name: nickname
