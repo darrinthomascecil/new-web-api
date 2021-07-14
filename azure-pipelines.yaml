@@ -12,6 +12,7 @@ variables:
   buildConfiguration: 'Release'
   anotherVariable: 'wonk'
   one: initialValue
+  two: blah
 parameters:
 - name: nickname
   type: string
