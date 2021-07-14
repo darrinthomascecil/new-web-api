@@ -24,7 +24,8 @@ jobs:
   steps:
   # assume that MyTask generates an output variable called "MyVar"
   # (you would learn that from the task's documentation)
-  - task: MyTask@1
+  - task:
+    - name: MyTask@1
     name: ProduceVar  # because we're going to depend on it, we need to name the step
 - job: B
   dependsOn: A
