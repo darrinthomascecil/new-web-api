@@ -19,3 +19,6 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+- bash: |
+
+    echo 'hello world ' && echo $(System.BuildDirectory)
