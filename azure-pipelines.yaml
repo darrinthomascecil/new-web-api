@@ -40,4 +40,6 @@ steps:
 #this runtime change might need to be in a different bash step in order to work
 - bash: | 
     echo $TWO
+    echo $BUILD_CONFIGURATION
+    echo $BUILDCONFIGURATION
     echo $(two)
