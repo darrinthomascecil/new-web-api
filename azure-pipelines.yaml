@@ -39,7 +39,5 @@ jobs:
   - bash: echo this is the token! $THE_TOKEN
   - checkout: new_repo
   - bash: |
-       echo 'woot' > test.txt
+       echo 'woot' > test.txt && echo 'the second line should just say woot'
        cat ./test.txt
-       pwd
-       ls -a 
