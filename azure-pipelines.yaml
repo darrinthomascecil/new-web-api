@@ -21,11 +21,11 @@ stages:
         pwd
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: /home/vsts/work/1/s/test.txt
+        pathToPublish: $(System.ArtifactsDirectory)/test.txt
         artifactName: drop
   - job: B2
     steps:
-    - bash: echo $(System.ArtifactsDirectory)
+    - bash: ls -a
     # - task: DownloadBuildArtifacts@1
     #   inputs:
     #     buildType: 'current'
