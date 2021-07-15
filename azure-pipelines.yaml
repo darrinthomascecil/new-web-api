@@ -12,9 +12,9 @@ pool:
 resources:
   repositories:
   - repository: new-web-api
-    type: git
+    type: github
     endpoint: darrinthomascecil
-    name: new-web-api
+    name: darrinthomascecil/new-web-api
 
 variables:
   buildConfiguration: 'Release'
