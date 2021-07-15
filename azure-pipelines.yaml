@@ -21,6 +21,6 @@ stages:
         pwd
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+        pathToPublish: /home/vsts/work/1/s/test.txt
         artifactName: drop
   - job: B2
