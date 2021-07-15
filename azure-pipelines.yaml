@@ -19,7 +19,7 @@ stages:
   - job: B1
     steps:
     - bash: |
-        echo 'this is only a test' > test.txt && ls
+        echo 'this is only a test' > test.txt && ls /bin/Debug/net5.0/ref/
         cat test.txt
         pwd
     - task: PublishBuildArtifacts@1
