@@ -42,3 +42,4 @@ jobs:
        echo README.md > test.txt
        cat ./test.txt
        pwd
+       ls -a 
