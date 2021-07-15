@@ -20,7 +20,7 @@ stages:
         containerRegistry: 'darrincecil-azurecr'
         repository: 'ado'
         command: 'buildAndPush'
-        Dockerfile: '/nginx/Dockerfile'
+        Dockerfile: './nginx/Dockerfile'
 
 - stage: B
   jobs:
