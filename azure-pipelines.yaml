@@ -9,10 +9,7 @@ stages:
 - stage: A
   jobs:
   - job: A1
-      steps:
-      - bash: echo $USER
-  - job: A2
-    
+   
 
 - stage: B
   jobs:
