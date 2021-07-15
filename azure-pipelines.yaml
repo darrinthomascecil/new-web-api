@@ -14,7 +14,7 @@ resources:
   - repository: new-web-api
     type: git
     endpoint: darrinthomascecil
-    name: darrinthomascecil/new-web-api
+    name: https://github.com/darrinthomascecil/new-web-api.git
 
 variables:
   buildConfiguration: 'Release'
