@@ -9,6 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+  - repository: new-web-api
+    type: git
+    endpoint: darrinthomascecil
+    name: darrinthomascecil/new-web-api
+
 variables:
   buildConfiguration: 'Release'
   anotherVariable: 'wonk'
@@ -16,10 +23,6 @@ variables:
   two: blah
   group: test-variable-group
   THE_TOKEN: not-set
-parameters:
-- name: nickname
-  type: string
-  default: d-man
 
 jobs:
 - job: A
