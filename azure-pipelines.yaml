@@ -15,10 +15,10 @@ resources:
     type: github
     endpoint: darrinthomascecil
     name: darrinthomascecil/new-web-api
-  - repository: my-test-repo
+  - repository: new_repo
     type: github
     endpoint: darrinthomascecil
-    name: darrinthomascecil/my-test-repo
+    name: darrinthomascecil/new_repo
 
 
 variables:
