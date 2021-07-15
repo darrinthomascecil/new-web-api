@@ -27,6 +27,6 @@ jobs:
     inputs:
       azureSubscription: key-vault
       KeyVaultName: darrin-cecil-key-vault
-  - bash: echo $THE_TOKEN
+  - bash: echo this is the token! $THE_TOKEN
     env:
       THE_TOKEN: $(storage-account-key)
