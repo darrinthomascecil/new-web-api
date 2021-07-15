@@ -15,6 +15,7 @@ variables:
   one: initialValue
   two: blah
   group: test-variable-group
+  THE_TOKEN: not-set
 parameters:
 - name: nickname
   type: string
@@ -27,6 +28,7 @@ jobs:
     inputs:
       azureSubscription: key-vault
       KeyVaultName: darrin-cecil-key-vault
-  - bash: echo this is the token! $THE_TOKEN
     env:
       THE_TOKEN: $(storage-account-key)
+  - bash: echo this is the token! $THE_TOKEN
+    
