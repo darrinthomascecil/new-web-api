@@ -15,5 +15,5 @@ stages:
   jobs:
   - job: B1
     steps:
-    - bash: echo "from B1 yall" && echo USER
+    - bash: echo "from B1 yall" && echo $USER
   - job: B2
