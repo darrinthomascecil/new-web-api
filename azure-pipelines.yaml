@@ -15,7 +15,10 @@ stages:
   jobs:
   - job: B1
     steps:
-    - bash: echo 'test' > test.txt
+    - bash: |
+        echo 'this is only a test' > test.txt
+        cat test.txt
+        pwd
     - task: PublishBuildArtifacts@1
       inputs:
         pathToPublish: '$(Build.ArtifactStagingDirectory)'
