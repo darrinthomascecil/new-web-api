@@ -1,43 +1,12 @@
-# ASP.NET Core
-# Build and test ASP.NET Core projects targeting .NET Core.
-# Add steps that run tests, create a NuGet package, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+stages:
+- stage: A
+  jobs:
+  - job: A1
+  - job: A2
 
-pool:
-  vmImage: ubuntu-latest
-
-resources:
-  repositories:
-  - repository: new-web-api
-    type: github
-    endpoint: darrinthomascecil
-    name: darrinthomascecil/new-web-api
-  - repository: new_repo
-    type: github
-    endpoint: darrinthomascecil
-    name: darrinthomascecil/new_repo
-    trigger:
-    - main
-
-variables:
-  buildConfiguration: 'Release'
-  anotherVariable: 'wonk'
-  one: initialValue
-  two: blah
-  group: test-variable-group
-  THE_TOKEN: not-set
-
-jobs:
-- job: A
-  steps:
-  - task: AzureKeyVault@2
-    inputs:
-      azureSubscription: key-vault
-      KeyVaultName: darrin-cecil-key-vault
-    env:
-      THE_TOKEN: $(storage-account-key)
-  - bash: echo this is the token! $THE_TOKEN
-  - checkout: new_repo
-  - bash: |
-       echo 'woot' > test.txt && echo 'the second line should just say woot'
-       cat ./test.txt
+- stage: B
+  jobs:
+  - job: B1
+    steps:
+    - bash: echo "from B1 yall"
+  - job: B2
