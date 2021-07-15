@@ -38,4 +38,7 @@ jobs:
       THE_TOKEN: $(storage-account-key)
   - bash: echo this is the token! $THE_TOKEN
   - checkout: new_repo
-  - bash: echo README.md > test.txt
+  - bash: |
+       echo README.md > test.txt
+       cat ./test.txt
+       pwd
