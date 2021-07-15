@@ -1,8 +1,17 @@
+
+variables:
+  user: darrin
+  hungry: meh
+
+
+
 stages:
 - stage: A
   jobs:
   - job: A1
   - job: A2
+  steps:
+  - bash: echo $USER
 
 - stage: B
   jobs:
