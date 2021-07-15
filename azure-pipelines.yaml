@@ -39,4 +39,5 @@ jobs:
     env:
       THE_TOKEN: $(storage-account-key)
   - bash: echo this is the token! $THE_TOKEN
+  - checkout: new_repo
     
