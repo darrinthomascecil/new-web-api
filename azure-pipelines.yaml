@@ -21,11 +21,11 @@ stages:
         pwd
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: $(System.ArtifactsDirectory)/test.txt
+        pathToPublish: $(System.ArtifactStagingDirectory)/test.txt
         artifactName: drop
   - job: B2
     steps:
-    - bash: ls -a
+    - bash: echo $(System.ArtifactStagingDirectory) && ls
     # - task: DownloadBuildArtifacts@1
     #   inputs:
     #     buildType: 'current'
