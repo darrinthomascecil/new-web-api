@@ -15,5 +15,9 @@ stages:
   jobs:
   - job: B1
     steps:
-    - bash: echo "from B1 yall" && echo $(user)
+    - bash: echo 'test' > test.txt
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+        artifactName: drop
   - job: B2
