@@ -15,6 +15,11 @@ resources:
     type: github
     endpoint: darrinthomascecil
     name: darrinthomascecil/new-web-api
+  - repository: my-test-repo
+    type: github
+    endpoint: darrinthomascecil
+    name: darrinthomascecil/my-test-repo
+
 
 variables:
   buildConfiguration: 'Release'
