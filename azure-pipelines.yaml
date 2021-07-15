@@ -16,7 +16,7 @@ stages:
   - job: B1
     steps:
     - bash: |
-        echo 'this is only a test' > test.txt
+        echo 'this is only a test' > test.txt && ls
         cat test.txt
         pwd
     - task: PublishBuildArtifacts@1
