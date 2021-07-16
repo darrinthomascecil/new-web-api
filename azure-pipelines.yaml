@@ -27,22 +27,14 @@ stages:
   - job: B1
     steps:
     - bash: |
-        echo 'this is only a test' > test.txt && ls /bin/Debug/net5.0/ref/
-        cat test.txt
-        pwd
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathToPublish: test.txt
-        artifactName: drop
+        echo 'this is only a test' > test.txt
+    - publish: test.txt
   - job: B2
     dependsOn: B1
     steps:
     - bash: |
         echo 'printing directory....'
         ls
-    # - task: DownloadBuildArtifacts@1
-    #   inputs:
-    #     buildType: 'current'
-    #     downloadType: 'single'
-    #     artifactName: 'drop'
-    #     downloadPath: '$(System.ArtifactsDirectory)'
+    - download: current
+      artifact: test.txt
+      displayName: Just seeing if she works
