@@ -28,6 +28,7 @@ stages:
     steps:
     - bash: |
         echo 'this is only a test' > test.txt
+        cat test.txt
     - publish: test.txt
   - job: B2
     dependsOn: B1
@@ -36,5 +37,5 @@ stages:
         echo 'printing directory....'
         ls
     - download: current
-      artifact: test.txt
+      artifact: ./test.txt
       displayName: Just seeing if she works
