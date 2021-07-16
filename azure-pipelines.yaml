@@ -14,13 +14,13 @@ stages:
       inputs:
         command: 'build'
         projects: './new-web-api.csproj'
-    - bash: ls 
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'darrincecil-azurecr'
-        repository: 'ado'
-        command: 'buildAndPush'
-        Dockerfile: './nginx/Dockerfile'
+    - bash: terraform -version
+    # - task: Docker@2
+    #   inputs:
+    #     containerRegistry: 'darrincecil-azurecr'
+    #     repository: 'ado'
+    #     command: 'buildAndPush'
+    #     Dockerfile: './nginx/Dockerfile'
 
 - stage: B
   jobs:
