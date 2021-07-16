@@ -36,6 +36,6 @@ stages:
     - bash: |
         echo 'printing directory....'
         ls
-    - download: current
-      artifact: ./test.txt
-      displayName: Just seeing if she works
+    # - download: current
+    #   artifact: ./test.txt
+    #   displayName: Just seeing if she works
