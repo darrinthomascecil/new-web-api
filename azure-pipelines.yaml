@@ -10,32 +10,11 @@ stages:
   jobs:
   - job: A1
     steps:
-    - task: DotNetCoreCLI@2
+    - task: AzureRmWebAppDeployment@4
       inputs:
-        command: 'build'
-        projects: './new-web-api.csproj'
-    - bash: terraform -version
-    # - task: Docker@2
-    #   inputs:
-    #     containerRegistry: 'darrincecil-azurecr'
-    #     repository: 'ado'
-    #     command: 'buildAndPush'
-    #     Dockerfile: './nginx/Dockerfile'
-
-- stage: B
-  jobs:
-  - job: B1
-    steps:
-    - bash: |
-        echo 'this is only a test' > test.txt
-        cat test.txt
-    - publish: test.txt
-  - job: B2
-    dependsOn: B1
-    steps:
-    - bash: |
-        echo 'printing directory....'
-        ls
-    # - download: current
-    #   artifact: ./test.txt
-    #   displayName: Just seeing if she works
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'darrincecil (b491bf98-6ea2-4a07-a641-200d61d7a735)'
+        appType: 'webAppLinux'
+        WebAppName: 'darrincecilvroom'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        RuntimeStack: 'DOTNETCORE|5.0'
