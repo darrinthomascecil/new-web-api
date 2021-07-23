@@ -14,6 +14,7 @@ stages:
       inputs:
         command: 'publish'
         publishWebProjects: true
+    - bash: ls
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
